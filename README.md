@@ -37,6 +37,10 @@ This is a FastAPI-based REST API for managing student records using a JSON file 
     uvicorn main:app --reload
     ```
     The API will be available at `http://localhost:8000`.
+ 7. Presentation Link to the project
+   ``````
+   https://code2tutorial.com/tutorial/37ac4da6-7dab-41b8-915f-b513d18bcf85/index.md
+   ``````
 
 ## API Documentation
 

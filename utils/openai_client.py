@@ -2,9 +2,9 @@
 import openai
 from config import settings
 from typing import List, Dict, Any
-import json_storage # Import our JSON utility
+from utils import json_storage # Import our JSON utility
 
-openai.api_key = settings.AIzaSyBxlFtDwa7ahb1pA-A5pzdgnzcgFwvVlq4
+openai.api_key = settings.OPENAI_API_KEY
 def query_student_data_natural_language(query: str) -> str:
     """
     Processes a natural language query using OpenAI and returns results from the JSON file.
@@ -59,7 +59,7 @@ def query_student_data_natural_language(query: str) -> str:
              except TypeError:
                  pass # Handle cases where gpa is not a number
         elif "Bola Abdullahi" in ai_response.lower():
-             results = [s for s in all_students if s.get('first_name', '').lower() == 'john' and s.get('last_name', '').lower() == 'smith']
+             results = [s for s in all_students if s.get('first_name', '').lower() == 'bola' and s.get('last_name', '').lower() == 'abdullahi']
         else:
             # If no specific filter is recognized, return all students or a generic message
             results = all_students
